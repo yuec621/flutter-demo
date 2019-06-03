@@ -4,6 +4,17 @@ A new Flutter project.
 
 ## Getting Started
 
+#安装Android Studio ---->下载插件flutter/下载虚拟机
+#安装java jdk
+#安装flutter---->环境配置
+#在vscode里面使用flutter--->
+#1.安装flutter插件 2.创建flutter create demo项目 3.打开lib/main.dart  4.打开虚拟机 5.执行flutter run
+
+
+
+
+
+
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
