@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MyApp(
+  //传递参数
+  // items:new List<String>.generate(1000, (i)=>"Item $i")
+));
 
 class MyApp extends StatelessWidget {
+  // final List<String>items;
+  // MyApp({Key key,@required this.items}):super(Key:key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
