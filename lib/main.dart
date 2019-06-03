@@ -1,70 +1,54 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp(
-  //传递参数
-  items:new List<String>.generate(1000, (i)=>"Item $i")
-));
+//入口函数
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  final List<String>items;
-  MyApp({Key key,@required this.items}):super(key:key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'flutter',
+      title: '电影海报',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('hello world'),
+          title: Text('电影海报实例'),
         ),
-        body: new ListView.builder(
-            itemCount: items.length,
-            itemBuilder: (context,index){
-              return new ListTile(
-                title: new Text('${items[index]}'),
-              );
-            },
-        )
+        body: GridView(
+         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3,
+         mainAxisSpacing: 2.0,
+         crossAxisSpacing: 2.0,
+         childAspectRatio: 0.7,
+         
+
+         ),
+         children: <Widget>[
+           new Image.network('https://img4.sycdn.imooc.com/szimg/5cbf00c608f52a3b06000338.jpg',
+           fit: BoxFit.cover,
+
+           ),
+            new Image.network('https://img4.sycdn.imooc.com/szimg/5cbf00c608f52a3b06000338.jpg',
+           fit: BoxFit.cover,
+           
+           ),
+            new Image.network('https://img4.sycdn.imooc.com/szimg/5cbf00c608f52a3b06000338.jpg',
+           fit: BoxFit.cover,
+           
+           ),
+            new Image.network('https://img4.sycdn.imooc.com/szimg/5cbf00c608f52a3b06000338.jpg',
+           fit: BoxFit.cover,
+           
+           ),
+            new Image.network('https://img4.sycdn.imooc.com/szimg/5cbf00c608f52a3b06000338.jpg',
+           fit: BoxFit.cover,
+           
+           ),
+            new Image.network('https://img4.sycdn.imooc.com/szimg/5cbf00c608f52a3b06000338.jpg',
+           fit: BoxFit.cover,
+           
+           ),
+
+         ],
         ),
-
-
-
-        // body: new ListView(
-        //   children: <Widget>[
-        //     new Image.network(
-        //         'https://img1.mukewang.com/szimg/5cbf00c608f52a3b06000338.jpg'),
-        //     new Image.network(
-        //         'https://img1.mukewang.com/szimg/5cbf00c608f52a3b06000338.jpg'),
-        //     new Image.network(
-        //         'https://img1.mukewang.com/szimg/5cbf00c608f52a3b06000338.jpg'),
-        //   ],
-        // ),
-      
-    );
-  }
-}
-
-
-class MyList extends StatelessWidget{
-  @override
-  Widget build(BuildContext context){
-    return ListView(
-      scrollDirection: Axis.horizontal,
-      children: <Widget>[
-              new Container(
-                width: 180.0,
-                color: Colors.lightBlue,
-              ),
-               new Container(
-                width: 180.0,
-                color: Colors.lightGreen,
-              ),
-               new Container(
-                width: 180.0,
-                color: Colors.limeAccent,
-              ),
-
-            ],
+      ),
     );
   }
 }
